@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <script>
+            function validate()
+            {
+                var emailID=document.myForm.email.value;
+                atpos=emailID.indexOf("@");
+                dotpos=emailID.lastIndexOf(".");
+                if (atpos<1 || ( dotpos<atpos+2 ) || ( dotpos+2>=emailID.length ))
+                
+                    alert("Please enter correct email ID")
+            }
+        </script>
+    </head>
+    <body>
+        <form name="myform" onsubmit="validate()">
+            <input type ="text" name="email">
+            <input type="submit" value="Submit">
+        
+        </form>
+    </body>
+</html>
